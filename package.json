@@ -23,7 +23,7 @@
 "main": "./index",
 "name": "heritable",
 "repository": {
-	"type": "git",
+	"type": "url",
 	"url": "http://github.com/zhami/heritable"
 },
 "version": "0.0.1-1"

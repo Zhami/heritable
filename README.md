@@ -8,8 +8,6 @@ via [npm]
 
     npm install heritable
 
-*NOTE:* -- not yet installed in npm registry
-
 ## Usage
 
 

@@ -1,0 +1,56 @@
+<h1>Heritable</h1>
+
+<p>Inheritance mechanisms for making prototypal classes</p>
+
+<h2>Installation</h2>
+
+<p>via [npm]</p>
+
+<pre><code>npm install heritable
+</code></pre>
+
+<p><em>NOTE:</em> -- not yet installed in npm registry</p>
+
+<h2>Usage</h2>
+
+<pre><code>var Heritable = require('heritable.js'),
+    Animal, Human,  // Constructors
+    animal, human;  // instances
+
+Animal = new Heritable('Animal');
+animal = new Animal();
+console.log('animal instanceof Animal: ' + (animal instanceof Animal));
+
+Human = new Heritable('Human');
+human = new Human();
+console.log('human instanceof Animal: ' + (human instanceof Animal));
+console.log('human instanceof Human: ' + (human instanceof Human));
+console.log('animal instanceof Human: ' + (animal instanceof Human));
+</code></pre>
+
+<h3>Some details</h3>
+
+<p>You can provide an initializer function and methods for a Heritable class:</p>
+
+<pre><code>animalInitializer = function (o) {
+    o = o || {};
+    this.type = o.type;
+};
+
+animalMethods = {
+    getType: function () {
+        return this.type;
+    }
+};
+
+Animal = new Heritable('Animal', null, animalInitializer, animalMethods);
+animal = new Animal({type: 'gorilla'});
+console.log('animal type:   ' + animal.getType());
+</code></pre>
+
+<h2>To Do</h2>
+
+<pre><code>1 do not init if already an object
+2 add method for adding method to a Heritable
+3 perhaps: distinguish Heritable class methods from members
+</code></pre>

@@ -1,0 +1,30 @@
+{ 
+"author": {
+	"name": "Stuart Malin", 
+	"email": "stuart@yellowhelium.com",
+	"url": "http://yellowhelium.com/"
+},
+"bugs" : {
+	"url": "http://github.com/zhami/heritable/issues"
+},
+"dependencies": {},
+"description": "Inheritance provider",
+"directories" : {
+	"lib" : "./lib"
+},
+"engines": {"node": "0.4"},
+"keywords": ["inheritance", "class"],
+"licenses":[
+	{
+		"type":"MIT",
+		"url":"http://github.com/zhami/heritable/raw/master/LICENSE"
+	}
+],
+"main": "./index",
+"name": "heritable",
+"repository": {
+	"type": "git",
+	"url": "http://github.com/zhami/heritable"
+},
+"version": "0.0.1-1"
+}
